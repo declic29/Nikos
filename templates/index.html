@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-<meta charset="UTF-8">
-<title>Lycoss 1996</title>
-<link rel="stylesheet" href="/static/css/style.css">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lycoss 1996</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+
+<!-- Header rétro avec skyline -->
 <div class="header">
-<h1>Lycoss 1996</h1>
-<p><em>Recherche rétro</em></p>
+    <img src="/static/img/skyline.png" alt="Skyline" style="width:200px;margin-bottom:10px;">
+    <h1>Lycoss 1996</h1>
+    <p><em>Le web, comme en 1996… mais en mieux.</em></p>
 </div>
+
+<!-- Formulaire de recherche -->
 <div class="search-box">
-<form>
-<input type="text" name="q" value="{{ query or '' }}" placeholder="Rechercher...">
-<button type="submit">Chercher</button>
-</form>
+    <form>
+        <input type="text" name="q" value="{{ query or '' }}" placeholder="Rechercher...">
+        <button type="submit">Chercher</button>
+    </form>
 </div>
+
+<!-- Résultats -->
 {% if results %}
 <div class="results">
-<ul>
-{% for r in results %}
-<li><a href="{{ r.url }}" target="_blank">{{ r.title }}</a></li>
-{% endfor %}
-</ul>
+    <h2>Résultats</h2>
+    <ul>
+        {% for r in results %}
+        <li><a href="{{ r.url }}" target="_blank">{{ r.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
 {% endif %}
-</body></html>
+
+<!-- Footer rétro -->
+<div class="footer">
+    &copy; 1996 - Lycoss style rétro | Tous droits réservés
+</div>
+
+</body>
+</html>

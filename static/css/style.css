@@ -1,3 +1,106 @@
-body{background:#E3E3F3;font-family:Verdana;text-align:center}
-.header{background:#000051;color:white;padding:20px}
-.search-box input{width:60%;padding:10px}
+/* === Style rétro Lycos 1996 === */
+
+body {
+    background-color: #c0d9ff; /* bleu clair */
+    font-family: "Verdana", "Tahoma", sans-serif;
+    color: #000080; /* bleu foncé texte */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header avec skyline et look années 90 */
+.header {
+    background-color: #000080;
+    color: yellow;
+    padding: 20px 0;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.header h1 {
+    font-family: "Courier New", monospace;
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 1px 1px 0 #ffcc00;
+}
+
+.header p {
+    font-family: "Verdana", sans-serif;
+    font-size: 16px;
+    margin: 5px 0 0 0;
+}
+
+/* Formulaire de recherche */
+.search-box {
+    margin: 20px auto;
+}
+
+.search-box input[type="text"] {
+    width: 60%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px outset #ffcc00;
+    background-color: #ffffcc;
+    color: #000080;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    color: #000080;
+    border: 2px outset #000080;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #ffeb99;
+}
+
+/* Résultats de recherche */
+.results {
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    border-top: 2px solid #000080;
+    padding-top: 10px;
+}
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    padding: 5px 0;
+    border-bottom: 1px solid #000080;
+}
+
+.results a {
+    color: #000080;
+    text-decoration: none;
+}
+
+.results a:hover {
+    text-decoration: underline;
+}
+
+/* Footer minimaliste style 90s */
+.footer {
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: #000080;
+    color: yellow;
+    font-size: 12px;
+}
+
+/* Responsive (mobile / tablette) */
+@media (max-width: 600px) {
+    .search-box input[type="text"] {
+        width: 90%;
+    }
+    .results {
+        width: 95%;
+    }
+}

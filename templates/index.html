@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<title>Lycoss 1996</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="header">
+<h1>Lycoss 1996</h1>
+<p><em>Recherche rétro</em></p>
+</div>
+<div class="search-box">
+<form>
+<input type="text" name="q" value="{{ query or '' }}" placeholder="Rechercher...">
+<button type="submit">Chercher</button>
+</form>
+</div>
+{% if results %}
+<div class="results">
+<ul>
+{% for r in results %}
+<li><a href="{{ r.url }}" target="_blank">{{ r.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+</body></html>
